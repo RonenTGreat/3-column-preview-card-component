@@ -7,31 +7,48 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 * {
   margin: 0;
   padding: 0;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -59,74 +76,90 @@ p, h1, h2, h3, h4, h5, h6 {
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.card__header h1{
+.card__header h1 {
   font-family: var(--heading);
-  color: var(--transparent-white);
+  color: var(--light-gray);
   padding: 2.5rem 0;
   font-size: 3rem;
   text-transform: uppercase;
 }
 
-.card__header .card_lead{
+.card__lead {
   font-family: var(--body);
-  color: red;
+  color: var(--transparent-white);
   margin-bottom: 2rem;
   font-size: 0.9rem;
 }
 
-.card_header{
+.card_header {
   display: flex;
   align-items: center;
   margin-bottom: 0.62rem;
 }
 
-.btn{
+.btn {
   background-color: #fff;
   font-size: 1rem;
-  padding: 0.7rem 2rem;
+  padding: 0.5rem 1.5rem;
   border: 3px transparent solid;
   border-radius: 5rem;
   margin: 2rem 0;
 }
 
-.card--bg-orange  .btn{
+.card--bg-orange .btn {
   color: var(--bright-orange);
 }
 
-.card--bg-blue .btn{
+.card--bg-blue .btn {
   color: var(--dark-cyan);
 }
 
-.card--bg-green .btn{
+.card--bg-green .btn {
   color: var(--very-dark-cyan);
 }
 
-.btn:hover{
+.btn:hover {
   background-color: transparent;
   color: var(--light-gray);
   border: 3px var(--light-gray) solid;
 }
 
-.card--bg-orange{
+.card--bg-orange {
   background-color: var(--bright-orange);
   color: var(--light-gray);
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
 
-.card--bg-blue{
+.card--bg-blue {
   background-color: var(--dark-cyan);
   color: var(--light-gray);
 }
 
-
-.card--bg-green{
+.card--bg-green {
   background-color: var(--very-dark-cyan);
   color: var(--light-gray);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    max-width: 20rem;
+    grid-template-columns: 1fr;
+  }
+
+  .card--bg-orange {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .card--bg-green {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
+}
 
 .attribution {
   font-size: 11px;
@@ -135,5 +168,3 @@ p, h1, h2, h3, h4, h5, h6 {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
-
