@@ -39,12 +39,94 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
   --bright-orange: hsl(31, 77%, 52%);
   --dark-cyan: hsl(184, 100%, 22%);
-  --very-dar-cyan: hsl(179, 100%, 13%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
   --transparent-white: hsla(0, 0%, 100%, 0.75);
   --light-gray: hsl(0, 0%, 95%);
   --heading: "Big Shoulders Display", cursive;
   --body: "Lexend Deca", sans-serif;
 }
+.container {
+  max-width: 60rem;
+  margin: 7.14rem auto;
+  padding: 1.24rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.9rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.card__header h1{
+  font-family: var(--heading);
+  color: var(--transparent-white);
+  padding: 2.5rem 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.card__header .card_lead{
+  font-family: var(--body);
+  color: red;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.card_header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.62rem;
+}
+
+.btn{
+  background-color: #fff;
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  border: 3px transparent solid;
+  border-radius: 5rem;
+  margin: 2rem 0;
+}
+
+.card--bg-orange  .btn{
+  color: var(--bright-orange);
+}
+
+.card--bg-blue .btn{
+  color: var(--dark-cyan);
+}
+
+.card--bg-green .btn{
+  color: var(--very-dark-cyan);
+}
+
+.btn:hover{
+  background-color: transparent;
+  color: var(--light-gray);
+  border: 3px var(--light-gray) solid;
+}
+
+.card--bg-orange{
+  background-color: var(--bright-orange);
+  color: var(--light-gray);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.card--bg-blue{
+  background-color: var(--dark-cyan);
+  color: var(--light-gray);
+}
+
+
+.card--bg-green{
+  background-color: var(--very-dark-cyan);
+  color: var(--light-gray);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
 
 .attribution {
   font-size: 11px;
@@ -53,3 +135,5 @@ p, h1, h2, h3, h4, h5, h6 {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+
